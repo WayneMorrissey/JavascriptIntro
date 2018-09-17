@@ -37,9 +37,40 @@ console.log("finally some js");
     Const
  */
 
- var cogListItem;
+/*  var cogListItem;
  cogListItem = document.querySelector('.icon-view li:last-child');
  console.log(cogListItem);
  var userName;
  userName = "username";
- console.log(userName);
+ console.log(userName); */
+
+/**
+ * Functions
+ * - task (format, create a formated dom node)
+ * - return 
+ * function calculateTax(price, formate)
+ * {
+ *     return price;
+ * }
+ * 
+ * calculateTax(100, "$");
+ */
+
+ // anonymous function
+ // var aFunction = funtion()
+
+ /**
+  * Events
+  * JS is an event driven language
+  * add event to a dom element you use the
+  * addEventListener()
+  */
+
+  var shoppingCart = document.querySelector('#cart');
+  var readInput = shoppingCart.querySelector('input:first-of-type');
+  var writeInput = shoppingCart.querySelector('input:last-of-type');
+  shoppingCart.addEventListener('click', onCheckOut)
+  function onCheckOut(e){
+    var value = readInput.value;
+    writeInput.value = "$" + value;
+  }
