@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>High Time Shipping Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="dashboard">
+
+    </div>
+    <nav class="sitenav">
+
+        <ul class="icon-view">
+            <li class="logo"><img src="img/logo.svg" alt="company logo"></li>
+            <li class="company-name">High Time Shipping</li>
+            <li class="user-settings">
+                <i class="material-icons">account_circle</i>
+                <p>user settings</p>
+            </li>
+        </ul>
+        <ul class="list-view">
+
+        </ul>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="side-bar">
+            <header>
+                <h2>Dashboard</h2>
+            </header>
+
+            <ul class="sidebar-options">
+                <li class="sidebar-option">
+                    <i class="material-icons">local_shipping</i></i> Shipping Calculator
+                </li>
+                <li>
+                    <div class="jim" data-id="1">Word</div>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="dashboard-panel">
+            <header>
+                <h2>Shipping Calculator</h2>
+            </header>
+            <div id="shipping-calcultor" class="shipping-calcultor">
+                <form action="" mehtod="POST" class="calculator">
+                    <div class="control-container column-display">
+                        <label for="product-weight">Enter Your Product Weight</label>
+                        <input type="text" name="weight" value="12" placeholder="enter weight">
+
+                    </div>
+                    <div class="control-container column-display">
+                        <label for="product-weight">Package Destination</label>
+                        <select name="province" id="province">
+                            <option value="AB">Alberta</option>
+                            <option value="BC">British Columbia</option>
+                            <option value="MB">Manitoba</option>
+                            <option value="NB">New Brunswick</option>
+                            <option value="NL">Newfoundland and Labrador</option>
+                            <option value="NS">Nova Scotia</option>
+                            <option value="NT">Northwest Territories</option>
+                            <option value="NU">Nunavut</option>
+                            <option value="ON">Ontario</option>
+                            <option value="PE">Prince Edward Island</option>
+                            <option value="QC">Quebec</option>
+                            <option value="SK">Saskatchewan</option>
+                            <option value="YT">Yukon</option>
+                        </select>
+
+                    </div>
+
+                    <div class="control-container row-display discreet">
+                        <label>Include Discreet Shipping</label>
+                        <input type="checkbox" checked="true" />
+                    </div>
+
+                    <div class="control-container row-display ">
+                        <div class="creditcard">
+                            <img src="img/visa.jpg" alt="">
+                            <input type="radio" name="creditcard" value="visa">
+                        </div>
+                        <div class="creditcard">
+                            <img src="img/mastercard.jpg" alt="">
+                            <input type="radio" name="creditcard" value="mastercard">
+                        </div>
+                        <div class="creditcard">
+                            <img src="img/paypal.jpg" alt="">
+                            <input type="radio" name="creditcard" value="paypal">
+                        </div>
+                        <div class="creditcard">
+                            <img src="img/amex.jpg" alt="">
+                            <input type="radio" name="creditcard" value="amex">
+                        </div>
+                    </div>
+                        <div class="control-container">
+                            <input type="submit" value="Calculate"/>
+                        </div>
+                </form>
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+
+    <main>
+
+    </main>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
