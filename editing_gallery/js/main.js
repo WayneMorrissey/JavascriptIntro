@@ -17,6 +17,13 @@ window.addEventListener('load', function(){
     var nullError = "A tag cannot be empty";
     var spacesError = "A tag cannot include spaces";
     var dupeError = "That tag already exists";
+    var hashError = "Hashtag can only be at the beginning of the tag";
+    var firstCharError = "Tag must start with an alphabet character (a-z)";
+    var charError = "Tag can only contain alphanumeric characters and underscores";
+
+    var firstCharRegExp = RegExp("^[^A-Za-z]");
+    var charRegExp = RegExp("[^A-z0-9_]");
+
 
 
     // cycles through thumbs array to create a matching obj instance and event listeners
@@ -95,6 +102,21 @@ window.addEventListener('load', function(){
         else if(selectedImg.tags.split(" ").includes('#' + tag))
         {
             error = dupeError;
+        }
+        // handles the error if there is a hashtag not at the front of the tag
+        else if(tag.includes('#'))
+        {
+            error = hashError;
+        }
+        // check that the first character is an alpha char
+        else if(firstCharRegExp.test(tag))
+        {
+            error = firstCharError;
+        }
+        // check that there is no special characters in the tag
+        else if(charRegExp.test(tag))
+        {
+            error = charError;
         }
         // if tag passes error checking, add the tag with a # to our image
         else
