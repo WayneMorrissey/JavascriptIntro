@@ -1,3 +1,5 @@
+
+
 window.addEventListener("load", function(loadEvent){
     var dataArray = [];
     // use a loop to build our objects
