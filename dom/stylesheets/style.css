@@ -1,0 +1,90 @@
+body{
+	font-size: 128%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgb(245, 246, 246);
+}
+
+.page-header{
+	text-align: center;
+	background: rgb(226, 226, 226);
+	box-shadow: 0px 2px 5px 0px rgb(214, 214, 214);
+}
+
+
+header img{
+	width: 8%;
+	padding-top: 1.5em;
+}
+
+.page-header h1{
+  font-size: 4em;
+  padding: 0.2em;
+  color: #616161;
+  padding-bottom: 0.5em;
+}
+
+
+
+section{
+	width: 80%;
+ margin: 0 auto;
+
+} 
+.nodes{
+	display:flex;
+	justify-content: space-around;
+	align-items: stretch;
+	 
+
+}
+.input, .output{
+	 width:450px;
+}
+.input{
+	margin: 4em auto;
+	margin-top:1em;	
+	padding: 1em;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: #fff;	
+	box-shadow: 2px 2px 5px 0px rgb(214, 214, 214);	
+}
+.output{
+	width:800px;
+	margin: 4em auto;
+	margin-top:1em;	
+	padding: 1em;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: #fff;	
+	box-shadow: 2px 2px 5px 0px rgb(214, 214, 214);
+}
+ 
+.field{
+	width:70%; 
+	margin-top:1rem;
+	padding-top:1rem;
+	min-width:460px;
+	display:flex;
+	flex-direction: column;
+	margin-bottom:2rem;
+}
+.field [type="text"]{
+	border-radius: 4px;
+	padding: 0.5rem;
+	border:none;
+	background:rgb(235, 235, 235);
+	font-size:1.5rem;
+}
+.field label{
+	color:grey;	
+	margin-bottom:0.625rem;
+}
+.field [type="submit"]{
+	width:50%;
+	align-self: flex-end;
+	padding:0.5rem;
+	font-size:1.5rem;
+	border:none;
+	border-radius:4px;
+	background:rgb(255, 90, 95);
+	color:white;
+}
