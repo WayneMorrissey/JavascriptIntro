@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebFlow</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <ul class="icon-view">
+            <li>weedsareus</li>
+            <li><i class="material-icons">shopping_cart</i>
+                <span class="cart-item-count">0</span>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="cart-component">
+
+
+            <section class="products-container">
+                <header class="products-header">
+                    <h2>Products In Stock</h2>
+                </header>
+            </section>
+
+
+            <section class="cart-display">
+                <header>
+                    <h3>Your Cart</h3>
+                </header>
+
+                <div class="items-container">
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+    </main>
+    <!-- 
+        Template tag isn't rendered to the DOM
+        it's a framgement of the DOM use 
+        querySelector along with content property
+     -->
+    <template>
+        <aside class="card product-item">
+            <header>
+                <h2 class="card-title"></h2>
+            </header>
+
+            <img class="card-thumbnail" src="" alt="">
+            <p class="card-details"></p>
+            <footer class="product-footer">
+                <div class="add-to-cart-btn">
+                    <i class="material-icons">
+                        add_shopping_cart
+                    </i>
+                </div>
+
+            </footer>
+        </aside>
+        <aside class="shopping-cart-item">
+            <img class="item-image" src="" alt="">
+            <div class="item-details">
+                <h3>title</h3>
+                <p>dlfjsdlfjsdlfjld</p>
+            </div>
+
+            <div class="quantity">
+                <p>quantity</p>
+                <p>1</p>
+            </div>
+            <footer class="remove-item"><i class="material-icons">
+                    highlight_off
+                </i></footer>
+        </aside>
+    </template>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

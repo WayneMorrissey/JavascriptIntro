@@ -1,0 +1,237 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+/* 
+site navigation
+*/
+.site-nav {
+  border-bottom: 1px solid rgb(203, 203, 203);
+  box-shadow: 0 0 5px 0 rgb(203, 203, 203);
+  padding: 0.25rem 0.5rem;
+  color: rgb(203, 203, 203);
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.icon-view {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.icon-view li:last-of-type,
+.remove-item {
+  cursor: pointer;
+}
+
+.cart-item-count {
+  font-size: 0.8rem;
+
+}
+
+/* 
+ Cart Components Layout Styles
+ contains:  
+  .products-container  
+  .cart-display 
+*/
+.cart-component {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.products-container {
+  background: rgb(253, 253, 253);
+  color: rgb(164, 164, 164);
+  max-width: 640px;
+
+}
+
+.cart-display {
+  display: none;
+}
+
+/* 
+Product Items Styles
+*/
+.products-header {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(74, 74, 74);
+}
+
+.product-item {
+  position: relative;
+  width: inherit;
+  margin: 0.55rem;
+}
+
+.product-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.25rem;
+}
+
+.product-footer:hover,
+.icon-view li:last-child:hover {
+  color: tomato;
+}
+
+i {
+  padding: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+/* 
+
+Card Display Styles
+*/
+.card {
+  border-top: 5px solid tomato;
+  box-shadow: 2px 2px 8px 1px rgb(216, 215, 218);
+  padding: 0.5rem;
+  padding-bottom: 3rem;
+
+}
+
+.card-title {
+  color: rgb(105, 105, 105);
+}
+
+.card-thumbnail {
+  border: 1px solid rgb(154, 154, 154);
+  padding: 2px;
+}
+
+/* 
+Utility Classes
+ 
+*/
+.icon-view li,
+.product-footer i,
+.remove-item {
+  user-select: none;
+
+}
+
+/* Medium Veiwport Display Styles */
+
+@media (min-width: 460px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.25rem;
+    justify-items: center;
+
+  }
+
+  .card:nth-child(even) {
+    justify-self: end;
+  }
+
+  .card:nth-child(odd) {
+    justify-self: start;
+  }
+
+  .products-header {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: rgb(74, 74, 74);
+    grid-column: span 2;
+    justify-self: center;
+  }
+
+}
+
+@media (min-width:640px) {
+  .products-container {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.25rem;
+    justify-items: center;
+
+  }
+
+  .products-header {
+    grid-column: span 3;
+  }
+
+  .cart-component {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .card-details {
+    font-size: 0.6825rem;
+  }
+
+  .products-container {
+    flex: 2;
+
+  }
+
+  .card:nth-child(even),
+  .card:nth-child(odd) {
+    justify-self: center;
+  }
+
+  .cart-display {
+    display: block;
+    flex: 1;
+    margin-top: 1rem;
+  }
+
+  .items-container {
+    padding: 2rem;
+  }
+
+  .shopping-cart-item {
+    font-size: 1rem;
+    border: 1px solid grey;
+    display: grid;
+    grid-template-columns: 120px 4fr repeat(2, 1fr);
+    align-items: center;
+    justify-items: flex-start;
+    grid-column-gap: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 3px 0 rgb(211, 211, 211);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 3px;
+    color: rgb(128, 128, 128);
+
+  }
+
+  .item-details p {
+    font-size: 0.625rem;
+  }
+
+  .quantity {
+    text-align: center;
+    font-size: 12px;
+    margin-right: 1rem;
+    font-weight: 500;
+  }
+
+  .products-header,
+  .cart-display header {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(74, 74, 74);
+
+  }
+}
