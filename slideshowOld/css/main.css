@@ -33,9 +33,6 @@ body {
 	color: #ddd;
 	font-size: 36px;
 }
-.image-tracker>span:hover {
-	cursor: pointer;
-}
 .image-tracker>span.active {
 	color: #333;
 }
