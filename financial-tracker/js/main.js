@@ -10,6 +10,11 @@ window.onload = function()
     var creditTotalElm = table.querySelector(".credits");
     var messages = [];
 
+    var to = setTimeout(timeout, 120000);
+
+    window.onclick = resetTimeout;
+    window.onkeydown = resetTimeout;
+
     form.onsubmit = function(evt)
     {
         evt.preventDefault();
@@ -65,6 +70,11 @@ window.onload = function()
             table.appendChild(row);
 
             btn.addEventListener("click", deleteItem);
+            
+            form.elements.description.value = null;
+            form.elements.type.value = "";
+            form.elements.currency.value = null;
+
 
             calculateTotals();
         }
@@ -151,5 +161,17 @@ window.onload = function()
         var creditText = document.createTextNode(`$${creditTotal.toFixed(2)}`);
         debitTotalElm.appendChild(debitText);
         creditTotalElm.appendChild(creditText);
+    }
+
+    function timeout()
+    {
+        alert("You have been inactive for 2 minutes. The page will now reload,");
+        location.reload(true);
+    }
+
+    function resetTimeout()
+    {
+        clearTimeout(to);
+        to = setTimeout(timeout, 120000);
     }
 }
